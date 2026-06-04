@@ -17,6 +17,9 @@ set $right l
 set $term foot
 # Your preferred application launcher
 set $menu fuzzel
+# location of toggle-theme 
+set $TOGGLE_THEME $HOME/dotfiles/bin/toggle-theme
+
 
 ### Output configuration
 #
@@ -42,7 +45,7 @@ gaps outer 5
 corner_radius 12
 smart_corner_radius on
 
-### Wofi
+
 bar {
 swaybar_command waybar
  }
@@ -219,7 +222,7 @@ bindsym $mod+r mode "resize"
 #
 # toggle dark and light mode
 #
-bindsym $mod+t exec $HOME/bin/toggle-theme/toggle-theme switch
+bindsym $mod+t exec $TOGGLE_THEME switch
 
 
 exec --no-startup-id lxpolkit
