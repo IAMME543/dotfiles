@@ -14,7 +14,7 @@
 /* GLOBAL */
 * {
     font-family: "JetBrainsMono Nerd Font", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: @tc;
 }
 
@@ -119,6 +119,10 @@ button:hover {
     background-color: @hover;
 }
 
+#custom-fuzzel {
+    font-size: 18px;
+}
+
 /* LAYOUT */
 #window {
     margin: 0 4px;
@@ -142,5 +146,5 @@ button:hover {
 }
 
 #clock {
-    font-size: 16px;
+    font-size: 17px;
 }
