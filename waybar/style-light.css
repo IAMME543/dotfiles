@@ -26,9 +26,11 @@ window#waybar {
     transition-duration: 0.5s;
 }
 
+
 window#waybar.hidden {
     opacity: 0.2;
 }
+
 
 /* BUTTON BASE */
 button {
@@ -42,6 +44,7 @@ button:hover {
     background: inherit;
     color: @tc;
 }
+
 
 /* WORKSPACES */
 #workspaces button {
@@ -71,13 +74,12 @@ button:hover {
 
 #workspaces {
     background: @workspace_bg;
+    margin: 0;
+    padding: 0;
 }
 
 
 
-#tooltip {
-    background: @bg;
-}
 
 /* MODULES */
 #clock,
@@ -96,7 +98,8 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #bluetooth,
-#custom-power {
+#custom-power,
+#custom-fuzzel {
     padding: 0 10px;
     font-size: 15px;
 }
@@ -111,18 +114,15 @@ button:hover {
 #power-profiles-daemon:hover,
 #bluetooth:hover,
 #custom-power:hover,
-#backlight:hover {
+#backlight:hover,
+#custom-fuzzel:hover {
     background-color: @hover;
 }
 
 /* LAYOUT */
-#window,
-#workspaces {
+#window {
     margin: 0 4px;
 }
-
-
-
 
 /* ANIMATION */
 @keyframes blink {

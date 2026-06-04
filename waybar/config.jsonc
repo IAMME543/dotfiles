@@ -4,9 +4,10 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/fuzzel",
         "sway/workspaces"
     ],
     "modules-center": [
@@ -143,5 +144,10 @@
         "format-disabled": "󰂲",
         "on-click": "flatpak run io.github.kaii_lb.Overskride",
         "tooltip-format": "{controller_alias} - {num_connections} connected"
+    },
+    "custom/fuzzel": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "sh -c '$HOME/dotfiles/bin/fuzzel-wrap'"
     }
 }
