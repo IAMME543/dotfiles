@@ -46,7 +46,8 @@
             "🌗",
             "🌖",
             "🌕"
-        ]
+        ],
+        "on-click": "$HOME/dotfiles/bin/toggle-theme switch"
     },
     "battery": {
         "states": {
@@ -126,14 +127,14 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-        "menu-actions": {
-            "shutdown": "shutdown",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
+        "menu": "on-click"
+        // "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        // "menu-actions": {
+        //     "shutdown": "shutdown",
+        //     "reboot": "reboot",
+        //     "suspend": "systemctl suspend",
+        //     "hibernate": "systemctl hibernate"
+        // }
     },
     "bluetooth": {
         "tooltip": false,
