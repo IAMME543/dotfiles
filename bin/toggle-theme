@@ -71,7 +71,7 @@ function waybar_light() {
 
 
 
-STATE_FILE="$HOME/.local/state/theme-toggle/state.json"
+STATE_FILE="${XDG_STATE_HOME:-$HOME/.local/state}/com.masondoesthings.desktop.settings/appearance/theme.txt"
 
 function setup() {
 	if [ -f "$STATE_FILE" ]
@@ -79,19 +79,16 @@ function setup() {
 		return
 	fi
 
-	mkdir -p "$(dirname $STATE_FILE)"
-	echo '{"theme": "dark"}' > "$STATE_FILE"
+	mkdir -p "$(dirname "$STATE_FILE")"
+	echo "dark" > "$STATE_FILE"
 }
 
 function set_theme() {
-	state="$(cat $STATE_FILE)"
-	echo "$state" | jq --arg t "$theme" '.theme = $t' > "$STATE_FILE"
+	echo "$theme" > "$STATE_FILE"
 }
 
-
 function get_theme() {
-	current="$(jq -r '.theme' "$STATE_FILE")"
-	echo "$current"
+	cat "$STATE_FILE"
 }
 
 theme=""
@@ -102,19 +99,19 @@ function process_args() {
 		exit 1
 	fi
 
-	if [ "$1" == "light" ] || [ "$1" == "dark" ]
+	if [ "$1" = "light" ] || [ "$1" = "dark" ]
 	then
 		theme="$1"
-	elif [ "$1" == "switch" ]; then
+	elif [ "$1" = "switch" ]; then
 		current="$(get_theme)"
 		theme="dark"
-		if [ "$current" == "dark" ]
+		if [ "$current" = "dark" ]
 		then
 			theme="light"
 		fi
 		echo "$theme"
 	else
-		echo "Unkown argument, please provide the argument 'dark', 'light' or 'switch'"
+		echo "Unknown argument, please provide 'dark', 'light' or 'switch'"
 		exit 1
 	fi
 }
