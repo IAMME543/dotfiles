@@ -14,18 +14,6 @@ function gtk_light() {
 }
 
 
-function sway_apply() {
-	swaymsg reload
-}
-
-function sway_dark() {
-	ln --symbolic --force "$XDG_CONFIG_DIR/sway/colors-catpuccin-mocha" "$XDG_CONFIG_DIR/sway/colors"
-}
-
-function sway_light() {
-	ln --symbolic --force "$XDG_CONFIG_DIR/sway/colors-catpuccin-latte" "$XDG_CONFIG_DIR/sway/colors"
-}
-
 function fuzzel_apply() {
     pkill -x fuzzel
     sleep 0.1
