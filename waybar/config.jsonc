@@ -49,6 +49,8 @@
             "🌕"
         ],
         "on-click": "$HOME/dotfiles/bin/toggle-theme switch"
+        //on-click could be made to call toggle-theme if we could ensure the script was in .local/bin like it is on my system 
+        // but I am not yet at the stage of create an install on a package manager for everything
     },
     "battery": {
         "states": {
