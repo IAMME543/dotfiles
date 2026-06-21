@@ -15,6 +15,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/media",
         "pulseaudio",
         "bluetooth",
         "network",
@@ -48,7 +49,7 @@
             "🌖",
             "🌕"
         ],
-        "on-click": "$HOME/dotfiles/bin/toggle-theme switch"
+        "on-click": "$HOME/.local/bin/obp/toggle-theme switch"
         //on-click could be made to call toggle-theme if we could ensure the script was in .local/bin like it is on my system 
         // but I am not yet at the stage of create an install on a package manager for everything
     },
@@ -115,18 +116,6 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
-    // "custom/media": {
-    //     "format": "{icon} {text}",
-    //     "return-type": "json",
-    //     "max-length": 40,
-    //     "format-icons": {
-    //         "spotify": "",
-    //         "default": "🎜"
-    //     },
-    //     "escape": true,
-    //     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    //     // 
-    // },
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
@@ -150,6 +139,6 @@
     "custom/fuzzel": {
         "format": " ",
         "tooltip": false,
-        "on-click": "sh -c '$HOME/dotfiles/bin/fuzzel-wrap'"
+        "on-click": "sh -c '$HOME/.local/bin/obp/fuzzel-wrap'"
     }
 }

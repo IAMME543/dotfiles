@@ -1,4 +1,0 @@
-#!/bin/sh
-swaymsg 'focus_follows_mouse no'
-fuzzel
-swaymsg 'focus_follows_mouse yes'
