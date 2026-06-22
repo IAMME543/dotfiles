@@ -7,7 +7,9 @@ set $term foot
 # Your preferred application launcher
 set $menu fuzzel
 # location of toggle-theme 
-set $TOGGLE_THEME $HOME/dotfiles/bin/toggle-theme
+set $TOGGLE_THEME toggle-theme
+# location of lock-screen
+set $LOCK_SCREEN lock-screen
 
 for_window [class="affinity.exe"] move to workspace 4, floating enable, resize set 900 600, move position center
 for_window [class="affinity.exe" title="Affinity"] move to workspace 4, floating enable, resize set 1900 1028, move position 0 0
@@ -205,7 +207,7 @@ bindsym $mod+r mode "resize"
 #
 bindsym $mod+t exec $TOGGLE_THEME switch
 
-bindsym $mod+l exec $HOME/dotfiles/bin/lock-screen
+bindsym $mod+l exec $LOCK_SCREEN
 
 
 
