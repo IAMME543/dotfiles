@@ -1,0 +1,25 @@
+#!/bin/bash
+
+NAME="$1"
+TITLE="${NAME}-popup"
+SCRIPT="$HOME/apps/${NAME}.py"
+
+# check if window exists
+EXISTS=$(swaymsg -t get_tree | grep -q "\"name\":\"$TITLE\""; echo $?)
+
+if [ "$EXISTS" != "0" ]; then
+    python "$SCRIPT" &
+    sleep 0.3
+    swaymsg "[title=\"$TITLE\"] move scratchpad"
+    swaymsg "[title=\"$TITLE\"] scratchpad show"
+    exit 0
+fi
+
+# toggle scratchpad state
+STATE=$(swaymsg -t get_tree | grep -A30 "\"name\":\"$TITLE\"" | grep '"scratchpad_state":"none"')
+
+if [ -n "$STATE" ]; then
+    swaymsg "[title=\"$TITLE\"] scratchpad show"
+else
+    swaymsg "[title=\"$TITLE\"] move scratchpad"
+fi
