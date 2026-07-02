@@ -40,7 +40,7 @@ smart_corner_radius on
 
 
 bar {
-swaybar_command waybar
+swaybar_command ironbar
  }
 
 ### Idle configuration

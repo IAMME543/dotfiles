@@ -1,0 +1,132 @@
+:root {
+    --color-dark-primary: #3f3f3fa9;
+    --color-dark-secondary: #3f3f3fb0;
+    --color-white: #fff;
+    --color-active: #6699cc;
+    --color-urgent: #8f0a0a;
+
+    --margin-lg: 1em;
+    --margin-sm: 0.5em;
+    font-size: 16px;
+}
+
+* {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    font-family: monospace;
+}
+
+
+scale>trough {
+    background-color: var(--color-dark-secondary);
+}
+
+scale>trough>highlight {
+    background-color: var(--color-active);
+    border-style: solid;
+    border-color: var(--color-active);
+    border-width: 0.2em;
+}
+
+scale>trough>slider {
+    background-color: var(--color-white);
+}
+
+switch>slider {
+    background-color: var(--color-white);
+}
+
+switch:checked {
+    background-color: var(--color-active);
+}
+
+switch:not(:checked) {
+    background-color: var(--color-dark-secondary);
+}
+
+#bar,
+popover,
+popover contents,
+calendar,
+popover .view {
+    background-color: var(--color-dark-primary);
+}
+
+box,
+button,
+label {
+    background-color: #0000;
+    color: var(--color-white);
+}
+
+button {
+    margin: 0;
+    padding: 0em 0.4em;
+    min-height: 0;
+    line-height: 1;
+}
+
+button:hover,
+button:active,
+*:selected {
+    background-color: var(--color-dark-secondary);
+}
+
+
+
+.clock {
+    font-weight: bold;
+}
+
+.popup-clock .calendar-clock {
+    font-size: 2.0em;
+}
+
+.popup-clock .calendar .today {
+    background-color: var(--color-active);
+}
+
+.workspaces .item.visible {
+    box-shadow: inset 0 -1px var(--color-white);
+}
+
+.workspaces .item.focused {
+    box-shadow: inset 0 -1px var(--color-active);
+    background-color: var(--color-dark-secondary);
+}
+
+.workspaces .item.urgent {
+    background-color: var(--color-urgent);
+}
+
+/*custom*/
+.popup {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+}
+
+.popup * {
+    padding: 0.2rem;
+}
+
+
+.volume .popup {
+    width: 200px;
+}
+
+popover {
+    margin: 8px;
+}
+
+popover.background,
+popover>contents {
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+window {
+    background-color: var(--color-dark-primary);
+}
